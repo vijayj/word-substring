@@ -1,0 +1,7 @@
+Approach
+
+I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run
+
+Some optimizations I could think of are
+1. find out the minimum word length so that we can avoid empty recursions 
+2. parallelize the search for suffix matches
