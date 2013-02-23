@@ -2,6 +2,21 @@ Approach
 
 I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run
 
+-----------------------------------
+First add ruby prof
 Some optimizations I could think of are
 1. find out the minimum word length so that we can avoid empty recursions 
 2. parallelize the search for suffix matches
+3. parallelize word search itself using - subsetted hash maps or an array that uses binary search to find
+
+-------------------------------
+backpocket answer in python ? or perl ? or java ?
+
+
+==============
+Benchmarks with hash implementation
+vijay@localhost:~/tests/word-substring$ rspec spec/word_matcher_spec.rb -l 71
+Run options: include {:line_numbers=>[71]}
+       user     system      total        real
+   4.900000   0.020000   4.920000 (  4.908990)
+
