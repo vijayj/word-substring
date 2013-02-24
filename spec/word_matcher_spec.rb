@@ -1,7 +1,9 @@
 require 'spec_helper'
 require_relative '../lib/word_matcher'
+require 'benchmark'
 
 describe "WordMatcherSpec" do
+
   context "no words" do
     let(:list){ [] }
     it "should return nothing" do
@@ -12,7 +14,6 @@ describe "WordMatcherSpec" do
 
   context "all words are equal, no matches" do
     let(:list){ %w(bat cat dog) }
-    let(:list2) { %w(aal aar) }
 
     it "should return nothing" do
       w = WordMatcher.new(list).find
@@ -21,7 +22,6 @@ describe "WordMatcherSpec" do
   end
 
   context "word match but no subwords" do
-    # let(:list){ %w( cat cats catsdogcats catxdogcatsrat dog dogcatsdog hippopotamuses rat ratcatdogcat )     }
     let(:list){ %w( cat cats catsdogcats catxdogcatsrat dog rat ratcatdogcat )     }
 
     it "should return ratdogcat" do
@@ -32,7 +32,6 @@ describe "WordMatcherSpec" do
 
   context "word with one character match" do
     let(:list) { %w(a aa aar b bapd c d d dex  r) }
-
 
     it "should return aar" do
       w = WordMatcher.new(list).find
@@ -61,25 +60,80 @@ describe "WordMatcherSpec" do
     it "should return longest word" do
       w = WordMatcher.new(@list).find
       w.longest_match.should == "ethylenediaminetetraacetates"
+
+      #w.all_found_word_count.should == 97109 #there are 2 empty spaces in the file, set will compress them to one
     end
-    
-    it "should return longest word benchmarked " do
-      pending('soon')
-      n = 100
-      require 'benchmark'
-      Benchmark.bm do |x|
-        w = nil
-        x.report { w = WordMatcher.new(@list).find }
-        w.longest_match.should == "ethylenediaminetetraacetates"
-      end
+
+    it "should return longest word file name " do
+      # pending("large file ahead")
+      filename = File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")
+      w = WordMatcher.load_from_file(filename).find
+      w.longest_match.should == "ethylenediaminetetraacetates"
     end
   end
 
   context "count all matched words" do
-    it "should return a count" do
-      pending
+    it "should return a count of zero when word list is empty" do
+      list = []
+      w = WordMatcher.new(list).find
+      w.all_matched_words_count.should == 0
+    end
+
+    it "should return a count of zero if no words match" do
+      list = %w(bat cat dog)
+      w = WordMatcher.new(list).find
+      w.all_matched_words_count.should == 0
+    end
+
+    it "should return a count of 1 if only one word matches" do
+      list = %w(bat cat cats dog rat ratdogcat  ta ttttt)
+      w = WordMatcher.new(list).find
+      w.all_matched_words_count.should == 1
+    end
+
+    it "should return a count of word matches for a given file" do
+      filename = File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")
+      w = WordMatcher.load_from_file(filename).find
+      w.all_matched_words_count.should == 97107
+    end
+  end
+end
+
+
+describe "WordMatcherSpec Benchmarks", :benchmarks => true do
+  
+  it "should return longest word benchmarked for just words" do
+    # pending('direct algo bm')
+    @list = []
+    File.open(File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")).each_line do |l|
+      @list << l.chomp
+    end
+    
+    n = 5
+    Benchmark.bmbm do |x|
+      x.report("algo:") do
+        for i in 1..n do
+          w = WordMatcher.new(@list).find
+          w.longest_match.should == "ethylenediaminetetraacetates"
+          w.all_matched_words_count.should == 97107
+        end
+      end
     end
   end
 
+  it "should return longest word benchmarked when reading a file" do
+    # pending('file read algo bm')
+    n = 10
+    Benchmark.bmbm do |x|
+      filename = File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")
+      x.report("algo_file:") do
+        for i in 1..n do
+          w = WordMatcher.load_from_file(filename).find
+          w.longest_match.should == "ethylenediaminetetraacetates"
+          w.all_matched_words_count.should == 97107
+        end
+      end
+    end
+  end
 end
-
+  

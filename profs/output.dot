@@ -1,0 +1,633 @@
+digraph "Profile" {
+labelloc=t;
+labeljust=l;
+subgraph "Thread 70247373819100" {
+70247394898400 [label="[No method]\n(100%)"];
+70247394898400 -> 70247394895900 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394898240 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394898060 [label="2/16" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394896660 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394898360 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394896020 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394896140 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394896120 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394898160 [label="2/20" fontsize=10 fontcolor="#666666"];
+70247394898400 -> 70247394898220 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394895900 [label="run\n(100%)"];
+70247394895900 -> 70247394895220 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895900 -> 70247394895880 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895900 -> 70247394894760 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394895900 -> 70247394894800 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895220 [label="find\n(93%)"];
+70247394895220 -> 70247394894820 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895220 -> 70247394895180 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394894980 [label="each\n(93%)"];
+70247394894980 -> 70247394895060 [label="788911/788912" fontsize=10 fontcolor="#666666"];
+70247394894980 -> 70247394894920 [label="3396492/3396492" fontsize=10 fontcolor="#666666"];
+70247394894980 -> 70247394894940 [label="6792984/6792984" fontsize=10 fontcolor="#666666"];
+70247394894980 -> 70247394895000 [label="3396492/4088298" fontsize=10 fontcolor="#666666"];
+70247394894980 -> 70247394895120 [label="172453/172454" fontsize=10 fontcolor="#666666"];
+70247394894820 [label="count_remaining_matching_words\n(93%)"];
+70247394894820 -> 70247394894980 [label="1/691806" fontsize=10 fontcolor="#666666"];
+70247394894820 -> 70247394895000 [label="1/4088298" fontsize=10 fontcolor="#666666"];
+70247394895060 [label="find_sub_match\n(90%)"];
+70247394895060 -> 70247394895000 [label="691805/4088298" fontsize=10 fontcolor="#666666"];
+70247394895060 -> 70247394895040 [label="788912/788912" fontsize=10 fontcolor="#666666"];
+70247394895060 -> 70247394894980 [label="691805/691806" fontsize=10 fontcolor="#666666"];
+70247394894920 [label="match\n(28%)"];
+70247394894920 -> 70247394894880 [label="3396492/3396492" fontsize=10 fontcolor="#666666"];
+70247394894940 [label="[]\n(18%)"];
+70247394894880 [label="include?\n(17%)"];
+70247394894880 -> 70247394894860 [label="3396492/3396492" fontsize=10 fontcolor="#666666"];
+70247394895000 [label="allocate\n(10%)"];
+70247394894860 [label="include?\n(7%)"];
+70247394895880 [label="load_from_file\n(7%)"];
+70247394895880 -> 70247394895340 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895880 -> 70247394895420 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895880 -> 70247394898060 [label="1/16" fontsize=10 fontcolor="#666666"];
+70247394895880 -> 70247394895520 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895880 -> 70247394895580 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394895340 [label="sort\n(4%)"];
+70247394895340 -> 70247394895240 [label="857305/857305" fontsize=10 fontcolor="#666666"];
+70247394895340 -> 70247394895300 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895420 [label="each_line\n(3%)"];
+70247394895420 -> 70247394895360 [label="173528/173528" fontsize=10 fontcolor="#666666"];
+70247394895420 -> 70247394895400 [label="173528/173528" fontsize=10 fontcolor="#666666"];
+70247394895360 [label="add\n(2%)"];
+70247394895360 -> 70247394897580 [label="173528/173535" fontsize=10 fontcolor="#666666"];
+70247394895120 [label="delete\n(2%)"];
+70247394895120 -> 70247394895100 [label="172454/172454" fontsize=10 fontcolor="#666666"];
+70247394895040 [label="empty?\n(1%)"];
+70247394897580 [label="[]=\n(1%)"];
+70247394895240 [label="<=>\n(1%)"];
+70247394895100 [label="delete\n(1%)"];
+70247394895400 [label="chomp\n(0%)"];
+70247394895300 [label="each\n(0%)"];
+70247394895300 -> 70247394895280 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895300 -> 70247394897560 [label="1/9" fontsize=10 fontcolor="#666666"];
+70247394895280 [label="each_key\n(0%)"];
+70247394897400 [label="each\n(0%)"];
+70247394897400 -> 70247394895060 [label="1/788912" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897380 [label="4/5" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897100 [label="14/18" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897040 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897160 [label="9/9" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394895120 [label="1/172454" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897220 [label="3/3" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897200 [label="9/9" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897580 [label="2/173535" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394896900 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897620 [label="18/25" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394897080 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897400 -> 70247394896860 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394895180 [label="find_longest_match\n(0%)"];
+70247394895180 -> 70247394895160 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895160 [label="each_with_index\n(0%)"];
+70247394895160 -> 70247394897400 [label="1/5" fontsize=10 fontcolor="#666666"];
+70247394898240 [label="require_relative\n(0%)"];
+70247394898240 -> 70247394898180 [label="3/3" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898360 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898420 [label="2/4" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898160 [label="8/20" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898100 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898120 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898240 -> 70247394898220 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394898060 [label="new\n(0%)"];
+70247394898060 -> 70247394897980 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394895840 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394895820 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394897640 [label="5/5" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394897940 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394898040 [label="11/11" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394897700 [label="4/4" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394895940 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394897880 [label="5/5" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394898000 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898060 -> 70247394897920 [label="5/5" fontsize=10 fontcolor="#666666"];
+70247394897980 [label="initialize\n(0%)"];
+70247394897980 -> 70247394897520 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897980 -> 70247394897860 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897980 -> 70247394897560 [label="1/9" fontsize=10 fontcolor="#666666"];
+70247394897980 -> 70247394898060 [label="2/16" fontsize=10 fontcolor="#666666"];
+70247394897520 [label="on\n(0%)"];
+70247394897520 -> 70247394897500 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897500 [label="define\n(0%)"];
+70247394897500 -> 70247394897440 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897500 -> 70247394896800 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897500 -> 70247394897460 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897440 [label="make_switch\n(0%)"];
+70247394897440 -> 70247394897400 [label="1/5" fontsize=10 fontcolor="#666666"];
+70247394897440 -> 70247394896840 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394897440 -> 70247394898060 [label="1/16" fontsize=10 fontcolor="#666666"];
+70247394896660 [label="parse!\n(0%)"];
+70247394896660 -> 70247394896600 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896660 -> 70247394896620 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898420 [label="set_encoding\n(0%)"];
+70247394896600 [label="permute!\n(0%)"];
+70247394896600 -> 70247394896480 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896600 -> 70247394896540 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896600 -> 70247394896180 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896600 -> 70247394896560 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896480 [label="order!\n(0%)"];
+70247394896480 -> 70247394896440 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394898360 [label="require\n(0%)"];
+70247394898360 -> 70247394898280 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394898360 -> 70247394898340 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394898360 -> 70247394898300 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394896440 [label="parse_in_order\n(0%)"];
+70247394896440 -> 70247394896420 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896440 -> 70247394897340 [label="1/6" fontsize=10 fontcolor="#666666"];
+70247394896420 [label="catch\n(0%)"];
+70247394896420 -> 70247394896360 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896420 -> 70247394897380 [label="1/5" fontsize=10 fontcolor="#666666"];
+70247394896420 -> 70247394897100 [label="2/18" fontsize=10 fontcolor="#666666"];
+70247394896420 -> 70247394897740 [label="1/6" fontsize=10 fontcolor="#666666"];
+70247394896420 -> 70247394896380 [label="2/3" fontsize=10 fontcolor="#666666"];
+70247394897380 [label="search\n(0%)"];
+70247394897380 -> 70247394897340 [label="5/6" fontsize=10 fontcolor="#666666"];
+70247394897380 -> 70247394897560 [label="5/9" fontsize=10 fontcolor="#666666"];
+70247394897340 [label="visit\n(0%)"];
+70247394897340 -> 70247394897320 [label="6/6" fontsize=10 fontcolor="#666666"];
+70247394894760 [label="p\n(0%)"];
+70247394894760 -> 70247394894740 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394894760 -> 70247394896060 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394897320 [label="reverse_each\n(0%)"];
+70247394897320 -> 70247394897280 [label="16/16" fontsize=10 fontcolor="#666666"];
+70247394897860 [label="add_officious\n(0%)"];
+70247394897860 -> 70247394897800 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897860 -> 70247394897820 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897800 [label="each\n(0%)"];
+70247394897800 -> 70247394897740 [label="4/6" fontsize=10 fontcolor="#666666"];
+70247394897800 -> 70247394897760 [label="4/4" fontsize=10 fontcolor="#666666"];
+70247394897800 -> 70247394897580 [label="4/173535" fontsize=10 fontcolor="#666666"];
+70247394895840 [label="initialize\n(0%)"];
+70247394895840 -> 70247394895580 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394895840 -> 70247394895600 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895840 -> 70247394898060 [label="1/16" fontsize=10 fontcolor="#666666"];
+70247394898280 [label="gem_original_require\n(0%)"];
+70247394897280 [label="search\n(0%)"];
+70247394897280 -> 70247394897260 [label="16/16" fontsize=10 fontcolor="#666666"];
+70247394897280 -> 70247394897560 [label="2/9" fontsize=10 fontcolor="#666666"];
+70247394897740 [label="call\n(0%)"];
+70247394897740 -> 70247394897580 [label="1/173535" fontsize=10 fontcolor="#666666"];
+70247394897740 -> 70247394898060 [label="4/16" fontsize=10 fontcolor="#666666"];
+70247394896020 [label="puts\n(0%)"];
+70247394896020 -> 70247394896000 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896360 [label="parse\n(0%)"];
+70247394896360 -> 70247394896320 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896360 -> 70247394896200 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896360 -> 70247394896540 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896360 -> 70247394896840 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896360 -> 70247394896380 [label="1/3" fontsize=10 fontcolor="#666666"];
+70247394896360 -> 70247394896560 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896000 [label="puts\n(0%)"];
+70247394896000 -> 70247394895960 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394898180 [label="attr_accessor\n(0%)"];
+70247394898180 -> 70247394898160 [label="10/20" fontsize=10 fontcolor="#666666"];
+70247394895960 [label="write\n(0%)"];
+70247394895520 [label="open\n(0%)"];
+70247394895520 -> 70247394895460 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895520 -> 70247394895480 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895820 [label="initialize\n(0%)"];
+70247394895820 -> 70247394895780 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895820 -> 70247394896140 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394895820 -> 70247394898060 [label="1/16" fontsize=10 fontcolor="#666666"];
+70247394897100 [label="===\n(0%)"];
+70247394895460 [label="initialize\n(0%)"];
+70247394896800 [label="append\n(0%)"];
+70247394896800 -> 70247394896780 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896800 -> 70247394896860 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896140 [label="nil?\n(0%)"];
+70247394897640 [label="initialize\n(0%)"];
+70247394897640 -> 70247394897620 [label="5/25" fontsize=10 fontcolor="#666666"];
+70247394897260 [label="fetch\n(0%)"];
+70247394897260 -> 70247394896920 [label="1/4" fontsize=10 fontcolor="#666666"];
+70247394896780 [label="update\n(0%)"];
+70247394896780 -> 70247394896740 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394896780 -> 70247394897400 [label="2/5" fontsize=10 fontcolor="#666666"];
+70247394896780 -> 70247394896720 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896780 -> 70247394896680 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896120 [label="inspect\n(0%)"];
+70247394896120 -> 70247394896080 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896120 -> 70247394896060 [label="1/2" fontsize=10 fontcolor="#666666"];
+70247394896320 [label="parse_arg\n(0%)"];
+70247394896320 -> 70247394896260 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896320 -> 70247394896300 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394896320 -> 70247394897620 [label="2/25" fontsize=10 fontcolor="#666666"];
+70247394896320 -> 70247394896240 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394894740 [label="inspect\n(0%)"];
+70247394894740 -> 70247394894700 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897040 [label="guess\n(0%)"];
+70247394897040 -> 70247394896980 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897040 -> 70247394897100 [label="2/18" fontsize=10 fontcolor="#666666"];
+70247394897040 -> 70247394896960 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897040 -> 70247394897020 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897940 [label="initialize\n(0%)"];
+70247394897940 -> 70247394898060 [label="4/16" fontsize=10 fontcolor="#666666"];
+70247394895780 [label="merge\n(0%)"];
+70247394895780 -> 70247394895700 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895780 -> 70247394895720 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895780 -> 70247394895760 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895580 [label="set_min_length\n(0%)"];
+70247394895580 -> 70247394895540 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394898160 [label="method_added\n(0%)"];
+70247394897160 [label="===\n(0%)"];
+70247394897160 -> 70247394897140 [label="9/9" fontsize=10 fontcolor="#666666"];
+70247394897620 [label="===\n(0%)"];
+70247394897560 [label="block_given?\n(0%)"];
+70247394896060 [label="inspect\n(0%)"];
+70247394898040 [label="allocate\n(0%)"];
+70247394898340 [label="unresolved_deps\n(0%)"];
+70247394895700 [label="do_with_enum\n(0%)"];
+70247394895700 -> 70247394895640 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394895700 -> 70247394895660 [label="1/1" fontsize=10 fontcolor="#666666"];
+70247394897700 [label="new\n(0%)"];
+70247394897700 -> 70247394897680 [label="4/4" fontsize=10 fontcolor="#666666"];
+70247394896920 [label="hash\n(0%)"];
+70247394896540 [label="to_proc\n(0%)"];
+70247394896540 -> 70247394896500 [label="2/2" fontsize=10 fontcolor="#666666"];
+70247394895940 [label="initialize\n(0%)"];
+70247394897880 [label="initialize\n(0%)"];
+70247394894800 [label="longest_match\n(0%)"];
+70247394896080 [label="inspect\n(0%)"];
+70247394896740 [label="invert\n(0%)"];
+70247394896740 -> 70247394896920 [label="2/4" fontsize=10 fontcolor="#666666"];
+70247394897760 [label="[]\n(0%)"];
+70247394897220 [label="keys\n(0%)"];
+70247394895600 [label="sort\n(0%)"];
+70247394896720 [label="update\n(0%)"];
+70247394896720 -> 70247394896920 [label="1/4" fontsize=10 fontcolor="#666666"];
+70247394896260 [label="to_a\n(0%)"];
+70247394897460 [label="top\n(0%)"];
+70247394897200 [label="===\n(0%)"];
+70247394895540 [label="last\n(0%)"];
+70247394896980 [label=">=\n(0%)"];
+70247394896200 [label="conv_arg\n(0%)"];
+70247394896200 -> 70247394897740 [label="1/6" fontsize=10 fontcolor="#666666"];
+70247394896300 [label="match\n(0%)"];
+70247394896500 [label="lambda\n(0%)"];
+70247394894700 [label="to_s\n(0%)"];
+70247394895640 [label="each_entry\n(0%)"];
+70247394895640 -> 70247394897400 [label="1/5" fontsize=10 fontcolor="#666666"];
+70247394898000 [label="*\n(0%)"];
+70247394896840 [label="empty?\n(0%)"];
+70247394897820 [label="base\n(0%)"];
+70247394896560 [label="method\n(0%)"];
+70247394897680 [label="initialize\n(0%)"];
+70247394897140 [label="==\n(0%)"];
+70247394898300 [label="empty?\n(0%)"];
+70247394896180 [label="[]=\n(0%)"];
+70247394896240 [label="rindex\n(0%)"];
+70247394898100 [label="private\n(0%)"];
+70247394897080 [label="notwice\n(0%)"];
+70247394896900 [label="downcase\n(0%)"];
+70247394896380 [label="shift\n(0%)"];
+70247394898120 [label="singleton_method_added\n(0%)"];
+70247394896860 [label="push\n(0%)"];
+70247394895720 [label="instance_of?\n(0%)"];
+70247394897920 [label="allocate\n(0%)"];
+70247394898220 [label="inherited\n(0%)"];
+70247394895760 [label="class\n(0%)"];
+70247394896680 [label="delete_if\n(0%)"];
+70247394897020 [label="===\n(0%)"];
+70247394895660 [label="respond_to?\n(0%)"];
+70247394896620 [label="include?\n(0%)"];
+70247394895480 [label="allocate\n(0%)"];
+70247394896960 [label="incompatible_argument_styles\n(0%)"];
+}
+subgraph cluster_70247382977080 {
+label = "IO";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898420;
+70247394896000;
+70247394895960;
+70247394895420;
+}
+subgraph cluster_70247382976920 {
+label = "Global";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898400;
+}
+subgraph cluster_70247382976700 {
+label = "Kernel";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898360;
+70247394898280;
+70247394898240;
+70247394897560;
+70247394897160;
+70247394896920;
+70247394896560;
+70247394896500;
+70247394896420;
+70247394896140;
+70247394896020;
+70247394895760;
+70247394895720;
+70247394895660;
+70247394894760;
+70247394894740;
+}
+subgraph cluster_70247382976480 {
+label = "<Module::Gem>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898340;
+}
+subgraph cluster_70247382976240 {
+label = "Hash";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898300;
+70247394897880;
+70247394897800;
+70247394897760;
+70247394897580;
+70247394897260;
+70247394897220;
+70247394896740;
+70247394896720;
+70247394896120;
+70247394895280;
+70247394895100;
+70247394894860;
+}
+subgraph cluster_70247382975900 {
+label = "Class";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898220;
+70247394898060;
+}
+subgraph cluster_70247382975700 {
+label = "Module";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898180;
+70247394898160;
+70247394898100;
+70247394897620;
+70247394896980;
+}
+subgraph cluster_70247382975360 {
+label = "BasicObject";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898120;
+70247394897680;
+70247394897140;
+}
+subgraph cluster_70247382975040 {
+label = "<Class::BasicObject>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898040;
+}
+subgraph cluster_70247382974720 {
+label = "String";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394898000;
+70247394897020;
+70247394896900;
+70247394896240;
+70247394896060;
+70247394895400;
+70247394895040;
+70247394894940;
+}
+subgraph cluster_70247382974500 {
+label = "OptionParser";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897980;
+70247394897860;
+70247394897820;
+70247394897520;
+70247394897500;
+70247394897460;
+70247394897440;
+70247394897380;
+70247394897340;
+70247394897080;
+70247394896660;
+70247394896600;
+70247394896480;
+70247394896440;
+}
+subgraph cluster_70247382974380 {
+label = "OptionParser::List";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897940;
+70247394897280;
+70247394896800;
+70247394896780;
+}
+subgraph cluster_70247382974060 {
+label = "<Class::Hash>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897920;
+}
+subgraph cluster_70247382973320 {
+label = "Proc";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897740;
+}
+subgraph cluster_70247382973060 {
+label = "<Class::Proc>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897700;
+}
+subgraph cluster_70247382972680 {
+label = "OptionParser::Switch";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897640;
+70247394896320;
+70247394896200;
+}
+subgraph cluster_70247382987680 {
+label = "Array";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897400;
+70247394897320;
+70247394896860;
+70247394896840;
+70247394896680;
+70247394896380;
+70247394896180;
+70247394895600;
+70247394895540;
+}
+subgraph cluster_70247382987120 {
+label = "Symbol";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897200;
+70247394896080;
+}
+subgraph cluster_70247382986780 {
+label = "Regexp";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897100;
+70247394896300;
+}
+subgraph cluster_70247382986420 {
+label = "<Class::OptionParser::Switch>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394897040;
+}
+subgraph cluster_70247382986100 {
+label = "<Class::OptionParser::Switch::NoArgument>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394896960;
+}
+subgraph cluster_70247382985020 {
+label = "<Object::Object>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394896620;
+}
+subgraph cluster_70247382984120 {
+label = "Method";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394896540;
+}
+subgraph cluster_70247383317780 {
+label = "OptionParser::Switch::RequiredArgument";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394896360;
+}
+subgraph cluster_70247382983480 {
+label = "MatchData";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394896260;
+}
+subgraph cluster_70247382982540 {
+label = "Match";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895940;
+70247394895900;
+}
+subgraph cluster_70247382982020 {
+label = "<Class::WordMatcher>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895880;
+}
+subgraph cluster_70247382981700 {
+label = "WordMatcher";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895840;
+70247394895580;
+70247394895220;
+70247394895180;
+70247394895060;
+70247394894920;
+70247394894820;
+70247394894800;
+}
+subgraph cluster_70247382981560 {
+label = "Set";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895820;
+70247394895780;
+70247394895700;
+70247394895360;
+70247394895300;
+70247394895120;
+70247394894880;
+}
+subgraph cluster_70247382980580 {
+label = "Enumerable";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895640;
+70247394895340;
+70247394895160;
+}
+subgraph cluster_70247382979880 {
+label = "<Class::IO>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895520;
+70247394895480;
+}
+subgraph cluster_70247382995800 {
+label = "File";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895460;
+}
+subgraph cluster_70247382995280 {
+label = "Fixnum";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895240;
+70247394894700;
+}
+subgraph cluster_70247382994440 {
+label = "<Class::Range>";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394895000;
+}
+subgraph cluster_70247382993980 {
+label = "Range";
+fontcolor = "#666666";
+fontsize = 16;
+color = "#666666";
+70247394894980;
+}
+}

@@ -8,10 +8,10 @@ class Match
 
   def run
     list = []
-    File.open(@word_file).each_line { |l| list << l.chomp }
-    w = WordMatcher.new(list).find
+    w = WordMatcher.load_from_file(@word_file)
+    w.find
     p w.longest_match
-    p w.all_found_word_count
+    p w.all_matched_words_count
   rescue Errno::ENOENT => e
     p "Seems like we have a missing file. please pass in a valid file"
   end

@@ -2,12 +2,19 @@ Approach
 
 I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run
 
+Points to consider
+There are 2 empty lines at the end of the file. I am considering them as one empty string. I have removed them but then I was not sure if that was an input
+
+
+Benchmark tests - marked as pending but uncomment and run them
+
 -----------------------------------
 First add ruby prof
 Some optimizations I could think of are
 1. find out the minimum word length so that we can avoid empty recursions 
 2. parallelize the search for suffix matches
 3. parallelize word search itself using - subsetted hash maps or an array that uses binary search to find
+4. No removals, create the reverse list, min word count and sorted set while reading the file 
 
 -------------------------------
 backpocket answer in python ? or perl ? or java ?
@@ -20,3 +27,19 @@ Run options: include {:line_numbers=>[71]}
        user     system      total        real
    4.900000   0.020000   4.920000 (  4.908990)
 
+
+10 times - 4.99
+   Rehearsal -----------------------------------------
+   algo:  50.890000   0.100000  50.990000 ( 50.994580)
+   ------------------------------- total: 50.990000sec
+
+               user     system      total        real
+   algo:  49.890000   0.070000  49.960000 ( 49.953811)
+   
+===== reading from file
+Rehearsal ----------------------------------------------
+algo_file:   5.400000   0.020000   5.420000 (  5.425492)
+------------------------------------- total: 5.420000sec
+
+                 user     system      total        real
+algo_file:   5.340000   0.010000   5.350000 (  5.349091)
