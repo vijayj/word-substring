@@ -1,6 +1,9 @@
 Approach
 
-I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run. After accounting for file reads and building the initial indexes, this goes up to 5.7 seconds.
+I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run. After accounting for file reads and building the initial indexes, this goes up to 5.7 seconds. Final optimization led it to 3.6 seconds - a savings of 36%. I realized that this program has no i/o, network calls so parallelization would not provide any speed gains. I tried it anyways to validate my hypothesis using parallel gem.The run time increased by more than double the standard running time
+
+
+Learnings:
 
 It seems to me that ranges in ruby are slow. I used ranges extensively in my for loop. Changed that to until loop. 
 Used min word length optimization to reduce calls to find matching words and in the recursive loop
