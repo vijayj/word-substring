@@ -1,33 +1,16 @@
 require 'set'
 
 class WordMatcher
+  attr_accessor :all_matched_words_count
   attr_accessor :words,:sorted_by_length
-  attr_accessor :min_length
-  attr_accessor :all_matched_words_count, :long_word
-
-  #add_profiler
+  attr_accessor :min_length, :long_word
 
   def self.load_from_file(filename)
-    # w = self.new
-    # File.open(filename).each_line do |line|
-    #   word = line.chomp
-    #   # w.words.add(word)
-    #   w.words[word] = true
-    #   # w.min_length = word.length < w.min_length ? word.length : w.min_length
-    # end
-    # w.sorted_by_length = w.words.keys.sort{ |w1,w2| w2.length <=> w1.length }
-    # w.set_min_length
-    # w
     words = []
     File.open(filename).each_line do |line|
       word = line.chomp
       words << word
-      # w.words.add(word)
-      # w.words[word] = true
-      # w.min_length = word.length < w.min_length ? word.length : w.min_length
     end
-    # w.sorted_by_length = w.words.keys.sort{ |w1,w2| w2.length <=> w1.length }
-    
     WordMatcher.new(words)    
   end
 
@@ -95,7 +78,6 @@ class WordMatcher
   end
 
   def find_sub_match(word, r = false)
-    # return false if word.length < self.min_length
     return true if word.empty?
     i = 0
     until i > word.length do
@@ -117,6 +99,5 @@ class WordMatcher
 
   def match(word)
     self.words[word]
-    # self.words.member?(word)
   end
 end

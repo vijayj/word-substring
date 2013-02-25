@@ -26,7 +26,6 @@ optparse = OptionParser.new do |opts|
   end
 end
 
-
 begin
   optparse.parse!
   if options[:filename].nil?
@@ -38,7 +37,6 @@ rescue OptionParser::InvalidOption, OptionParser::MissingArgument => e
   puts optparse
   exit
 end
-
 
 puts "Starting matcher with arguments: #{options.inspect}"
 Match.new(options[:filename]).run

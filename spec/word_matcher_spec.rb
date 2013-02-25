@@ -61,11 +61,9 @@ describe "WordMatcherSpec" do
       w = WordMatcher.new(@list).find
       w.longest_match.should == "ethylenediaminetetraacetates"
 
-      #w.all_found_word_count.should == 97109 #there are 2 empty spaces in the file, set will compress them to one
     end
 
     it "should return longest word file name " do
-      # pending("large file ahead")
       filename = File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")
       w = WordMatcher.load_from_file(filename).find
       w.longest_match.should == "ethylenediaminetetraacetates"
@@ -103,7 +101,6 @@ end
 describe "WordMatcherSpec Benchmarks", :benchmarks => true do
   
   it "should return longest word benchmarked for just words" do
-    # pending('direct algo bm')
     @list = []
     File.open(File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")).each_line do |l|
       @list << l.chomp
@@ -122,7 +119,6 @@ describe "WordMatcherSpec Benchmarks", :benchmarks => true do
   end
 
   it "should return longest word benchmarked when reading a file" do
-    # pending('file read algo bm')
     n = 10
     Benchmark.bmbm do |x|
       filename = File.join(File.dirname(__FILE__), "fixtures", "words_for_problem.txt")
