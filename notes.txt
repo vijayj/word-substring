@@ -1,12 +1,24 @@
 Approach
 
-I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run
+I thought about using tries - suffix tries. I spent some time thinking about it. Then I tried a simple brute force approach. This seems to work. The first run I had took approximately 4.9 seconds to run. After accounting for file reads and building the initial indexes, this goes up to 5.7 seconds.
+
+It seems to me that ranges in ruby are slow. I used ranges extensively in my for loop. Changed that to until loop. 
+Used min word length optimization to reduce calls to find matching words and in the recursive loop
+changed implementation of Set to Hash as Set is backed by hashmap and therefore incurs performance overhead ( found it using ruby-prof ) over simple hash.
+
+
+I have written code to handle empty lists, lists with no match and the given file. It is comprehensive enough to cover cases.
+
+Run the benchmarks.There are 2 files. The first one assumes that word list is created by another class.The second one reads the file in the class. I have found that reading the file in with ruby is slow
+
+BTW, if I write this in perl then it will be fast
 
 Points to consider
 There are 2 empty lines at the end of the file. I am considering them as one empty string. I have removed them but then I was not sure if that was an input
 
 
-Benchmark tests - marked as pending but uncomment and run them
+TODO
+Perl example
 
 -----------------------------------
 First add ruby prof
@@ -36,10 +48,58 @@ Run options: include {:line_numbers=>[71]}
                user     system      total        real
    algo:  49.890000   0.070000  49.960000 ( 49.953811)
    
-===== reading from file
+===== reading from file - 10 times
+Run options: include {:line_numbers=>[132]}
 Rehearsal ----------------------------------------------
-algo_file:   5.400000   0.020000   5.420000 (  5.425492)
-------------------------------------- total: 5.420000sec
+algo_file:  56.630000   0.080000  56.710000 ( 56.705309)
+------------------------------------ total: 56.710000sec
 
                  user     system      total        real
-algo_file:   5.340000   0.010000   5.350000 (  5.349091)
+algo_file:  50.240000   0.060000  50.300000 ( 50.303732)
+.
+
+Finished in 1 minute 47.02 seconds
+1 example, 0 failures
+
+Randomized with seed 22639
+
+vijay@localhost:~/tests/word-substring$ rspec spec/word_matcher_spec.rb -l132
+Run options: include {:line_numbers=>[132]}
+Rehearsal ----------------------------------------------
+algo_file:  53.720000   0.090000  53.810000 ( 53.804151)
+------------------------------------ total: 53.810000sec
+
+                 user     system      total        real
+algo_file:  48.680000   0.060000  48.740000 ( 48.749479)
+.
+
+Finished in 1 minute 42.57 seconds
+
+vijay@localhost:~/tests/word-substring$ rspec spec/word_matcher_spec.rb -l132 - 100 runs
+Run options: include {:line_numbers=>[132]}
+Rehearsal ----------------------------------------------
+algo_file: 482.480000   0.570000 483.050000 (483.043200)
+----------------------------------- total: 483.050000sec
+
+                 user     system      total        real
+algo_file: 437.310000   0.550000 437.860000 (437.859308)
+
+
+=========
+rake spec
+vijay@localhost:~/tests/word-substring$ rake spec_with_benchmarks
+/Users/ThoughtWorks/.rvm/rubies/ruby-1.9.3-p194/bin/ruby -S rspec ./spec/word_matcher_spec.rb  --tag benchmarks
+Run options: include {:focus=>true, :benchmarks=>true}
+Rehearsal -----------------------------------------
+algo:  35.900000   0.050000  35.950000 ( 35.943353)
+------------------------------- total: 35.950000sec
+
+            user     system      total        real
+algo:  35.830000   0.040000  35.870000 ( 35.873924)
+.Rehearsal ----------------------------------------------
+algo_file:  37.950000   0.060000  38.010000 ( 38.001428)
+------------------------------------ total: 38.010000sec
+
+                 user     system      total        real
+algo_file:  36.220000   0.060000  36.280000 ( 36.277787)
+.

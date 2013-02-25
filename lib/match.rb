@@ -10,8 +10,8 @@ class Match
     list = []
     w = WordMatcher.load_from_file(@word_file)
     w.find
-    p w.longest_match
-    p w.all_matched_words_count
+    p "longest word is - #{w.longest_match}"
+    p "Total count of matching long words from words - #{w.all_matched_words_count}"
   rescue Errno::ENOENT => e
     p "Seems like we have a missing file. please pass in a valid file"
   end

@@ -109,7 +109,7 @@ describe "WordMatcherSpec Benchmarks", :benchmarks => true do
       @list << l.chomp
     end
     
-    n = 5
+    n = 10
     Benchmark.bmbm do |x|
       x.report("algo:") do
         for i in 1..n do
