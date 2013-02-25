@@ -7,7 +7,6 @@ class Match
   end
 
   def run
-    list = []
     w = WordMatcher.load_from_file(@word_file)
     w.find
     p "longest word is - #{w.longest_match}"

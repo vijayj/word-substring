@@ -19,8 +19,13 @@ BTW, if I write this in perl then it will be fast
 Points to consider
 There are 2 empty lines at the end of the file. I am considering them as one empty string. I have removed them but then I was not sure if that was an input
 
+How to run
+unzip the directory
+ruby lib/match.rb -f spec/fixtures/words_for_problem.txt 
 
 TODO
+
+
 Perl example
 
 -----------------------------------
